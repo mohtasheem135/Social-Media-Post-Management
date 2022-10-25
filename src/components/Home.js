@@ -83,7 +83,7 @@ const Home = () => {
                             boxSizing: "border-box",
                             marginLeft: "0px",
                             marginTop: '63px',
-                            width: '180px',
+                            width: '120px',
                         }),
                         menu: () => ({
                             position: "absolute",
@@ -94,7 +94,7 @@ const Home = () => {
                             borderBottom: '1px dotted pink',
                             color: state.isSelected ? 'red' : 'blue',
                             // paddingLeft: 85,
-                            width: '180px',
+                            width: '120px',
                             paddingTop: 10,
                             textAlign: 'center',
 

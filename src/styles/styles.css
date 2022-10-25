@@ -43,17 +43,10 @@
     font-family: 'Slabo 27px', serif;
     font-size: 20px;
     cursor: default;
-    z-index: -1;
 }
 
 .main-container {
     display: flex;
-}
-
-.side-menu {
-    /* border: 2px solid black; */
-    width: 400px;
-    height: 600px;
 }
 
 .save-btn {
@@ -70,41 +63,7 @@
 
 }
 
-/* Side-Menu */
-.side-menu-table-row {
-    border: 2px solid black;
-}
-
-.side-menu-table-row:hover {
-    background-color: gray;
-    cursor: pointer;
-    color: white;
-}
-
-.side-menu-table {
-    margin-top: 150px;
-    width: 300px;
-    height: 200px;
-    text-align: center;
-    font-size: 18px;
-    position: fixed;
-    font-family: 'Arvo', serif;
-
-}
-
-
 /* Navbar */
-.Navbar-container {
-    border: 2px solid black;
-    background-color: black;
-    width: 100%;
-
-    height: 70px;
-    position: fixed;
-    top: 0%;
-    cursor: default;
-}
-
 .nav-head {
     color: white;
     font-size: 20px;
@@ -130,6 +89,7 @@
 }
 
 .menu {
+    /* width: auto; */
     width: 100%;
     height: 70px;
     margin-top: -8px;
@@ -173,74 +133,128 @@
 
 @media only screen and (max-width: 600px) {
 
-    /* Navbar */
-    /* .Navbar-container {
-        border: 2px solid black;
-        background-color: rgb(255, 0, 0);
-        width: 100%;
+    /* Main Post */
 
-        height: 70px;
-        position: fixed;
-        top: 0%;
-        cursor: default;
-    } */
+    .post-cards-1 {
+        width: 345px;
+    }
 
+    .save-btn {
+        margin: 165px 290px;
+    }
+
+    .post-title {
+        font-size: 15px;
+    }
+
+    .post-body {
+        font-size: 15px;
+    }
+
+
+    /* NavBar */
     .nav-head {
-        color: white;
-        font-size: 20px;
-        float: right;
-        margin-right: 50px;
-        font-family: 'Arvo', serif;
-        cursor: default;
+        font-size: 16px;
+        margin-right: 20px;
+        margin-top: 25px;
+
     }
 
 
     .nav-head-1 {
-        color: white;
-        font-size: 16px;
-        /* font-weight: bolder; */
+        font-size: 18px;
         margin-top: 20px;
-        position: fixed;
-        float: left;
-        margin-left: 30px;
-        font-family: 'Pacifico', cursive;
-        /* font-family: 'Lobster', cursive; */
-        /* font-family: 'Shalimar', cursive; */
 
-    }
-
-    .menu {
-        width: 100%;
-        height: 70px;
-        margin-top: -8px;
-        margin-left: -8px;
-        position: fixed;
-        background-color: black;
     }
 
     .menu-btn-container {
-        display: flex;
-        letter-spacing: 2px;
-        z-index: -1;
         position: absolute;
-        margin: 13px 111px;
+        margin: 15px 190px;
     }
-    
+
     .menu-btn {
-        color: white;
-        /* background-color: red; */
         background: none;
-        border-bottom: 2px dotted red;
+        margin-left: -95px;
         font-size: 14px;
         font-family: 'Slabo 27px', serif;
-        /* width: 60px; */
         text-align: center;
+        margin-top: 30px;
     }
 
-    .menu-btn:hover {
-        color: gray;
-        cursor: pointer;
+}
+
+@media only screen and (max-width: 460px) {
+
+    /* Main Post */
+
+    .post-cards-1 {
+        width: 270px;
+        margin-left: 150px;
     }
 
+    .save-btn {
+        margin: 165px 200px;
+    }
+
+    /* NavBar */
+
+    .nav-head-1 {
+        margin-left: 15px;
+
+    }
+
+    .menu-btn-container {
+        margin: 15px 145px;
+    }
+
+    .menu-btn {
+        margin-left: -100px;
+        font-size: 15px;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    /* Main Post */
+
+    .post-cards-1 {
+        width: 245px;
+        margin-left: 130px;
+    }
+
+    .save-btn {
+        margin: 152px 200px;
+    }
+
+    .post-title {
+        font-size: 14px;
+    }
+
+    .post-body {
+        font-size: 14px;
+        margin-top: -30px;
+    }
+
+
+    /* NavBar */
+    .nav-head {
+        font-size: 16px;
+        margin-right: 20px;
+        margin-top: 25px;
+        display: none;
+    }
+
+
+    
+
+    .menu-btn-container {
+        margin: 0px 160px;
+    }
+
+    .menu-btn {
+        margin-top: 25px;
+    }
 
 }
