@@ -2,14 +2,12 @@ import React, { useEffect, useState } from 'react';
 import "../styles/styles.css";
 import Select from 'react-select';
 import Navbar from './Navbar';
-import { useNavigate } from 'react-router';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 
-const Home = () => {
 
+const Home = () => {
     const [posts, setPosts] = useState({});
     const [selectedOption, setSelectedOption] = useState(null)
-    const navigate = useNavigate();
 
     useEffect(() => {
         const getData = async () => {
@@ -68,42 +66,24 @@ const Home = () => {
         var showList = [];
         showList.push(param);
         showList = showList.concat(JSON.parse(localStorage.getItem('showList') || '[]'));
-        console.log(showList);
+        // console.log(showList);
         localStorage.setItem("showList", JSON.stringify(showList));
-        console.log(JSON.parse(localStorage.getItem('showList')))
-    }
-
-    const goTo = (event, param) => {
-        console.log(param)
-        navigate(`${param}`)
+        // console.log(JSON.parse(localStorage.getItem('showList')))
+        alert("Saved the page successfully 💾")
     }
 
     return (
         <div>
             <Navbar data={'Home'} />
             <div className='main-container'>
-                <div className='side-menu'>
-                    <table className='side-menu-table'>
-                        <tr>
-                            <td onClick={event => goTo(event, '/')} className='side-menu-table-row'>Home</td>
-                        </tr>
-                        <tr>
-                            <td onClick={event => goTo(event, '/savedContent')} className='side-menu-table-row'>Saved Content</td>
-                        </tr>
-                        <tr>
-                            <td onClick={event => goTo(event, '/about')} className='side-menu-table-row'>About</td>
-                        </tr>
-
-                    </table>
-                </div>
                 <Select
                     styles={{
                         container: () => ({
                             position: "fixed",
                             boxSizing: "border-box",
                             marginLeft: "0px",
-                            marginTop: '67px',
-                            width: '130px',
+                            marginTop: '63px',
+                            width: '180px',
                         }),
                         menu: () => ({
                             position: "absolute",
@@ -114,7 +94,7 @@ const Home = () => {
                             borderBottom: '1px dotted pink',
                             color: state.isSelected ? 'red' : 'blue',
                             // paddingLeft: 85,
-                            width: '130px',
+                            width: '180px',
                             paddingTop: 10,
                             textAlign: 'center',
 
@@ -134,7 +114,7 @@ const Home = () => {
                             <div className='per-post-div-1' key={id} >
                                 {posts[id].userId ?
                                     <div className='post-cards-1'>
-                                        <button className='save-btn' onClick={event => jj(event, posts[id])}><SaveAltIcon  /></button>
+                                        <button className='save-btn' onClick={event => jj(event, posts[id])}><SaveAltIcon /></button>
                                         <p className='post-title'> userId - {posts[id].userId} : {posts[id].title} </p>
                                         <p className='post-body'>👉 {posts[id].body}</p>
                                         <hr />
