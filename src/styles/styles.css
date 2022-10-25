@@ -2,7 +2,7 @@
 
 
 .post-card-container {
-    /* border: 2px solid black; */
+    border: 2px solid black;
     padding: 40px 0px;
     display: block;
     align-items: center;
@@ -22,8 +22,6 @@
 
     width: 950px;
     background-color: #1aff8c;
-    /* border: 2px solid red; */
-    /* z-index: -1; */
     margin-left: 50px;
 }
 
@@ -79,8 +77,7 @@
     border: none;
     position: absolute;
     margin: 180px 800px;
-    color: black;
-    
+    color: black; 
 }
 
 .save-btn:hover{
@@ -153,4 +150,20 @@
     position: absolute;
     margin: 165px 475px;
     cursor: default;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .per-post-div-1{
+        border: 2px solid red;
+        width: 600px;
+        margin-left: 350px;
+    }
+    .post-cards-1 {
+        border: 2px solid blue;
+        width: 550px;
+    }
+    .save-btn{
+        margin: 180px 450px;
+    }
 }
