@@ -17,6 +17,7 @@ const SavedContent = () => {
             if (arr[i].id == param.id) {
                 arr.splice(i, 1);
                 localStorage.setItem('showList', JSON.stringify(arr));
+                window.location.reload()
             }
         }
     }
