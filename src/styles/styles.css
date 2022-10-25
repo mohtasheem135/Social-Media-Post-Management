@@ -102,15 +102,16 @@
     font-family: 'Slabo 27px', serif;
     font-size: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     letter-spacing: 2px;
     z-index: -1;
+    margin-left: 400px;
 }
 
 .menu-btn {
     color: white;
-    background-color: red;
+    background-color: gray;
+    border-right: 1px solid rgb(78, 77, 77);
+    border-left: 1px solid rgb(78, 77, 77);
     width: 150px;
     text-align: center;
 }
@@ -225,7 +226,7 @@
     }
 
     .save-btn {
-        margin: 152px 200px;
+        margin: 150px 200px;
     }
 
     .post-title {
@@ -247,14 +248,31 @@
     }
 
 
-    
+
 
     .menu-btn-container {
-        margin: 0px 160px;
+        margin: 18px 130px;
+        align-items: left;
+        justify-content: left;
+        position: fixed;
+        padding: 0;
     }
 
     .menu-btn {
-        margin-top: 25px;
+        display: inline-block;
+        margin-top: 0px;
+        color: white;
+        width: 60px;
+        text-align: start;
+        padding: 0px 10px;
+        margin-left: 0px;
+        background-color: gray;
+        border-right: 1px solid rgb(78, 77, 77);
+        border-left: 1px solid rgb(78, 77, 77);
+    }
+
+    .menu-btn:hover {
+        color: black;
     }
 
 }

@@ -13,9 +13,9 @@ const Navbar = ({ data }) => {
       <p className='nav-head-1'>Social-media</p>
       <p className='nav-head'>{data}</p>
       <li className='menu-btn-container'>
-        <ul className='menu-btn' onClick={event => goTo(event, '/')}>Home</ul>
-        <ul className='menu-btn' onClick={event => goTo(event, '/savedContent')}>Saved Content</ul>
-        <ul className='menu-btn' onClick={event => goTo(event, '/about')}>About</ul>
+        <ul className='menu-btn btn-1' onClick={event => goTo(event, '/')}>Home</ul>
+        <ul className='menu-btn btn-2' onClick={event => goTo(event, '/savedContent')}>Saved-Content</ul>
+        <ul className='menu-btn btn-3' onClick={event => goTo(event, '/about')}>About</ul>
       </li>
     </div>
   )
