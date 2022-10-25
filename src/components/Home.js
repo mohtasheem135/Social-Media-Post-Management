@@ -101,18 +101,23 @@ const Home = () => {
                         container: () => ({
                             position: "fixed",
                             boxSizing: "border-box",
-                            marginLeft: "190px",
+                            marginLeft: "0px",
                             marginTop: '67px',
+                            width: '130px',
                         }),
                         menu: () => ({
                             position: "absolute",
-                            background: 'white'
+                            background: 'white',
                         }),
                         option: (provided, state) => ({
                             ...provided,
                             borderBottom: '1px dotted pink',
                             color: state.isSelected ? 'red' : 'blue',
-                            padding: 20,
+                            // paddingLeft: 85,
+                            width: '130px',
+                            paddingTop: 10,
+                            textAlign: 'center',
+
                             // background: 'white'
                         }),
                     }}
@@ -129,7 +134,7 @@ const Home = () => {
                             <div className='per-post-div-1' key={id} >
                                 {posts[id].userId ?
                                     <div className='post-cards-1'>
-                                        <button className='save-btn' onClick={event => jj(event, posts[id])}><SaveAltIcon sx={{ fontSize: 35 }} /></button>
+                                        <button className='save-btn' onClick={event => jj(event, posts[id])}><SaveAltIcon  /></button>
                                         <p className='post-title'> userId - {posts[id].userId} : {posts[id].title} </p>
                                         <p className='post-body'>👉 {posts[id].body}</p>
                                         <hr />

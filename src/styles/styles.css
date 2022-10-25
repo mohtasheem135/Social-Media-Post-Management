@@ -72,15 +72,15 @@
     height: 600px;
 }
 
-.save-btn{
+.save-btn {
     background: none;
     border: none;
     position: absolute;
     margin: 180px 800px;
-    color: black; 
+    color: black;
 }
 
-.save-btn:hover{
+.save-btn:hover {
     color: white;
     cursor: pointer;
 
@@ -113,7 +113,7 @@
     border: 2px solid black;
     background-color: black;
     width: 100%;
-    
+
     height: 70px;
     position: fixed;
     top: 0%;
@@ -145,7 +145,7 @@
 }
 
 /* About */
-.about-content{
+.about-content {
     /* margin-top: 40px; */
     font-size: 30px;
     position: absolute;
@@ -155,35 +155,137 @@
 
 
 @media only screen and (max-width: 600px) {
-    .per-post-div-1{
+    .per-post-div-1 {
         /* border: 2px solid red; */
         width: 390px;
         margin-left: -50px;
     }
+
     .post-cards-1 {
         /* border: 2px solid blue; */
         width: 335px;
     }
+
     .post-title {
         font-size: 17px;
         height: 80px;
     }
+
     .post-body {
-        
+
         font-size: 15px;
     }
-    .save-btn{
+
+    .save-btn {
         margin: 155px 280px;
     }
+
     /* Side Menu */
     .side-menu-table {
         margin-top: 150px;
         width: 170px;
         height: 180px;
-        text-align: center;
+        font-size: 16px;
+
+    }
+    /* Navbar */
+    .nav-head{
+        font-size: 15px;
+        margin-top: 25px;
+    }
+    .nav-head-1{
         font-size: 18px;
-        position: fixed;
-        font-family: 'Arvo', serif;
-    
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .per-post-div-1 {
+        /* border: 2px solid red; */
+        width: 315px;
+        margin-left: -50px;
+    }
+
+    .post-cards-1 {
+        /* border: 2px solid blue; */
+        width: 280px;
+    }
+
+    .post-title {
+        font-size: 17px;
+        height: 80px;
+    }
+
+    .post-body {
+
+        font-size: 15px;
+    }
+
+    .save-btn {
+        margin: 160px 230px;
+    }
+
+    /* Side Menu */
+    .side-menu-table {
+        margin-top: 150px;
+        width: 150px;
+        height: 160px;
+        font-size: 14px;
+
+    }
+    /* Navbar */
+    .nav-head{
+        font-size: 15px;
+        margin-top: 25px;
+    }
+    .nav-head-1{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .per-post-div-1 {
+        /* border: 2px solid red; */
+        width: 235px;
+        /* margin-left: -50px; */
+    }
+
+    .post-cards-1 {
+        /* border: 2px solid blue; */
+        width: 185px;
+    }
+
+    .post-title {
+        font-size: 13px;
+        height: 80px;
+    }
+
+    .post-body {
+        font-size: 13px;
+        height: 120px;
+        margin-top: -28px;
+    }
+
+    .save-btn {
+        margin: 160px 170px;
+    }
+
+    /* Side Menu */
+    .side-menu-table {
+        margin-top: 150px;
+        width: 140px;
+        height: 155px;
+        font-size: 14px;
+
+    }
+    /* Navbar */
+    .nav-head{
+        font-size: 15px;
+        margin-top: 25px;
+    }
+    .nav-head-1{
+        font-size: 18px;
+        margin-top: 20px;
     }
 }
