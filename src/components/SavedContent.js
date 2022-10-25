@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from './Navbar';
 import { useNavigate } from 'react-router';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -10,14 +10,21 @@ const SavedContent = () => {
         console.log(param)
         navigate(`${param}`)
     }
-    useEffect(() => {
-        console.log(JSON.parse(localStorage.getItem('all-post')));
-    }, [])
+
+    const jj = (event, param) => {
+        const arr = [...JSON.parse(localStorage.getItem('showList'))]
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i].id == param.id) {
+                arr.splice(i, 1);
+                localStorage.setItem('showList', JSON.stringify(arr));
+            }
+        }
+    }
+
     return (
         <div>
             <Navbar data={'Saved Contents'} />
             <div className='main-container'>
-
                 <div className='side-menu'>
                     <table className='side-menu-table'>
                         <tr>
@@ -32,14 +39,14 @@ const SavedContent = () => {
                     </table>
                 </div>
                 <div className='post-card-container'>
-                    {Object.keys(JSON.parse(localStorage.getItem('all-post'))).map((id, index) => {
+                    {Object.keys(JSON.parse(localStorage.getItem('showList'))).map((id, index) => {
                         return (
                             <div className='per-post-div-1' key={id} >
-                                {JSON.parse(localStorage.getItem('all-post'))[id] != null ?
+                                {JSON.parse(localStorage.getItem('showList'))[id] != null ?
                                     <div className='post-cards-1'>
-                                        <button className='save-btn'><DeleteIcon sx={{ fontSize: 35 }} /></button>
-                                        <p className='post-title'> userId - {JSON.parse(localStorage.getItem('all-post'))[id].userId} : {JSON.parse(localStorage.getItem('all-post'))[id].title} </p>
-                                        <p className='post-body'>👉 {JSON.parse(localStorage.getItem('all-post'))[id].body}</p>
+                                        <button onClick={event => jj(event, JSON.parse(localStorage.getItem('showList'))[id])} className='save-btn'><DeleteIcon sx={{ fontSize: 35 }} /></button>
+                                        <p className='post-title'> userId - {JSON.parse(localStorage.getItem('showList'))[id].userId} : {JSON.parse(localStorage.getItem('showList'))[id].title} </p>
+                                        <p className='post-body'>👉 {JSON.parse(localStorage.getItem('showList'))[id].body}</p>
                                         <hr />
                                     </div>
                                     : null
@@ -48,7 +55,6 @@ const SavedContent = () => {
                         )
                     })}
                 </div>
-                {/* <h1>{JSON.parse(localStorage.getItem('post'))[0].title}</h1> */}
             </div>
         </div>
     )

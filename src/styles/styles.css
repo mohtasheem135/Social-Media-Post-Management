@@ -11,30 +11,31 @@
 
 }
 
-.per-post-div {
+/* .per-post-div {
     border-right: 1px solid gray;
     border-left: 1px solid gray;
     display: inline-flex;
     border: 2px solid red;
-    /* margin-left: 55px; */
-}
+} */
 
 .per-post-div-1 {
 
-    width: 900px;
+    width: 950px;
+    background-color: #1aff8c;
     /* border: 2px solid red; */
+    /* z-index: -1; */
     margin-left: 50px;
 }
 
-.post-cards {
+/* .post-cards {
     width: 500px;
     height: 200px;
     display: inline-block;
     padding: 0px 25px;
-    /* border: 2px solid red; */
-}
+} */
 
 .post-cards-1 {
+    /* border: 2px solid red; */
     width: 900px;
     height: 200px;
     display: inline-block;
@@ -60,6 +61,7 @@
     font-family: 'Slabo 27px', serif;
     font-size: 20px;
     cursor: default;
+    z-index: -1;
 }
 
 .main-container {
@@ -75,15 +77,15 @@
 .save-btn{
     background: none;
     border: none;
-    cursor: pointer;
     position: absolute;
     margin: 180px 800px;
-    color: grey;
+    color: black;
     
 }
 
 .save-btn:hover{
-    color: black;
+    color: white;
+    cursor: pointer;
 
 }
 

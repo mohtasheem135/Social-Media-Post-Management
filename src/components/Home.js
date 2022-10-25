@@ -12,7 +12,6 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // localStorage.removeItem('all-post')
         const getData = async () => {
             const url = `https://jsonplaceholder.typicode.com/posts`;
 
@@ -27,6 +26,7 @@ const Home = () => {
         }
 
         getData()
+
     }, [])
 
     const getDataa = async (userId) => {
@@ -62,22 +62,17 @@ const Home = () => {
         setSelectedOption(selectedOption)
         const value = selectedOption.value
         getDataa({ value })
-
     }
-
-
 
     const jj = (event, param) => {
-
-        console.log(event)
-        let oldData = JSON.parse(localStorage.getItem('all-post'))
-        // localStorage.setItem('all-post', JSON.stringify({0: param}));
-        localStorage.setItem('all-post', JSON.stringify([...oldData, param]));
-        console.log(JSON.parse(localStorage.getItem('all-post')))
-
-
-
+        var showList = [];
+        showList.push(param);
+        showList = showList.concat(JSON.parse(localStorage.getItem('showList') || '[]'));
+        console.log(showList);
+        localStorage.setItem("showList", JSON.stringify(showList));
+        console.log(JSON.parse(localStorage.getItem('showList')))
     }
+
     const goTo = (event, param) => {
         console.log(param)
         navigate(`${param}`)
