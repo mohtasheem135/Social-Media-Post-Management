@@ -15,7 +15,7 @@ const SavedContent = () => {
     const jj = (event, param) => {
         // console.log(event)
         const arr = [...JSON.parse(localStorage.getItem('showList'))]
-        for (let i = 1; i < arr.length; i++) {
+        for (let i = 0; i < arr.length; i++) {
             if (arr[i].id == param.id) {
                 arr.splice(i, 1);
                 localStorage.setItem('showList', JSON.stringify(arr));
